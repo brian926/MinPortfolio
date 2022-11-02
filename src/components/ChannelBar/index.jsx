@@ -8,7 +8,7 @@ const random = ['variants', 'plugins']
 
 const ChannelBar = () => {
     return (
-        <div className='channel-container'>
+        <div className='channel-bar shadow-lg'>
             <ChannelBlock />
             <div className='channel-container'>
                 <Dropdown header='Topics' selections={ topics } />
@@ -26,7 +26,7 @@ const Dropdown = ({ header, selections }) => {
         <div className="dropdown">
             <div onClick={() => setExpanded(!expanded)} className='dropdown-header'>
                 <ChevronIcon expanded={expanded} />
-                <h5 className={expanded ? 'dropdown-header-text-select' : 'dropdown-header-text'}>
+                <h5 className={expanded ? 'dropdown-header-text-selected' : 'dropdown-header-text'}>
                     {header}
                 </h5>
                 <FaPlus size='12' className='text-accent text-opacity-80 my-auto ml-auto' />
